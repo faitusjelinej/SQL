@@ -1,5 +1,4 @@
 -- A phone call is considered an international call when the person calling is in a different country than the person receiving the call.
-
 -- What percentage of phone calls are international? Round the result to 1 decimal.
 
 -- Assumption:
