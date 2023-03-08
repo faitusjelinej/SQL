@@ -15,6 +15,8 @@ insert into measurements values (523542,1246.24,'2022-07-10 13:15:00');
 insert into measurements values (143562,1124.50,'2022-07-11 15:00:00');
 insert into measurements values (346462,1234.14,'2022-07-11 16:45:00');
 
+-- Solutions
+
 with cte as
 (select CAST(measurement_time as date) measurement_day,
 measurement_value,
