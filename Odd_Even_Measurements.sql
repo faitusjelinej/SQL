@@ -1,4 +1,5 @@
--- Assume you are given the table containing measurement values obtained from a Google sensor over several days. Measurements are taken several times within a given day.
+-- Assume you are given the table containing measurement values obtained from a Google sensor over several days. 
+-- Measurements are taken several times within a given day.
 -- Write a query to obtain the sum of the odd-numbered and even-numbered measurements on a particular day, in two different columns. 
 
 
