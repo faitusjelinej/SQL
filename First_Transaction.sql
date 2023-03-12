@@ -26,7 +26,7 @@ select *
 from user_transactions
 ;
 
--- Solution
+-- Solution 1 using row_number() window function
 
 with cte as 
 (select user_id,
@@ -40,11 +40,12 @@ where spend > 50.00 and
 rn = 1
 ;
 
+-- Solution 2 using rank() window function
 
 with cte as 
 (select user_id,
 spend,transaction_date,
-row_number() over (PARTITION BY user_id ORDER BY transaction_date) rn
+rank() over (PARTITION BY user_id ORDER BY transaction_date) rn
 from user_transactions)
 
 select COUNT(distinct user_id)
@@ -52,6 +53,8 @@ from cte
 where spend > 50.00 and
 rn = 1
 ;
+
+-- Solution 3 using first_value() window function
 
 with cte as 
 (select user_id,
