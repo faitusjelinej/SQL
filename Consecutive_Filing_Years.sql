@@ -1,4 +1,18 @@
 -- Consecutive Filing Years
+-- ------------------------
+-- Intuit offers several tax filing products, such as TurboTax and QuickBooks, which come in multiple versions.
+-- Write a query to find the user ids of everyone who filed their taxes with any version of TurboTax three or more years in a row. Display the output in the ascending order of user ids.
+-- Assumption:
+-- As reflected in the table, a user can only file taxes once a year using one product.
+
+# filed_taxes Table:
+------------------
+Column Name	Type
+filing_id	integer
+user_id	varchar
+filing_date	datetime
+product	varchar #
+
 
 with tax as (
 SELECT user_id,
