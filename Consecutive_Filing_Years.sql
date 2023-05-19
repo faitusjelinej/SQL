@@ -6,13 +6,14 @@
 -- As reflected in the table, a user can only file taxes once a year using one product.
 
 /* filed_taxes Table:
-------------------
+---------------------
 Column Name	Type
 filing_id	integer
 user_id	varchar
 filing_date	datetime
 product	varchar */
 
+-- Solution
 
 with tax as (
 SELECT user_id,
